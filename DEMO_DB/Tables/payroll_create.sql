@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset praba:create_payroll_table
+--changeset praba:create_payroll_table runOnChange:true
 CREATE TABLE DEMO_DB.payroll (
   emp_id INT PRIMARY KEY,
   first_name VARCHAR(40),

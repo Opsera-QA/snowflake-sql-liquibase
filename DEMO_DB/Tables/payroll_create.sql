@@ -8,3 +8,7 @@ CREATE TABLE DEMO_DB.payroll (
   ctc INT
 );
 --rollback DROP TABLE DEMO_DB.payroll
+
+--changeset praba:create_payroll_table:1
+alter table DEMO_DB.payroll add column designation VARCHAR(40)
+--rollback ALTER TABLE DEMO_DB.payroll DROP COLUMN designation;

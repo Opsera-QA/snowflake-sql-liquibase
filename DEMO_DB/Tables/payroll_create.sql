@@ -1,4 +1,6 @@
 --liquibase formatted sql
+--changeset praba:drop_payroll_table runOnChange:true
+drop table DEMO_DB.payroll
 --changeset praba:create_payroll_table runOnChange:true
 CREATE TABLE DEMO_DB.payroll (
   emp_id INT PRIMARY KEY,

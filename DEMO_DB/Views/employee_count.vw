@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset srinath:create_employee_branch_view runOnChange:true
+--changeset srinath:create_branch_view runOnChange:true
 CREATE OR REPLACE VIEW DEMO_DB.v_employee_branch 
 AS
 SELECT 

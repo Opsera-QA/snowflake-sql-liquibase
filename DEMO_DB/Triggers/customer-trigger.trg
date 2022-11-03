@@ -15,4 +15,5 @@ BEGIN
          WHEN DELETING THEN 'DELETE'
    END;
 END;
+/
 --rollback DROP TRIGGER DEMO_DB.employee_audit_trg

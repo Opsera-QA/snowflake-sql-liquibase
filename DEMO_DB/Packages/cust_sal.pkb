@@ -10,4 +10,5 @@ CREATE OR REPLACE PACKAGE BODY DEMO_DB.cust_sal AS
       WHERE emp_id = c_id; 
    END find_sal; 
 END cust_sal; 
+/
 --rollback DROP PACKAGE BODY DEMO_DB.cust_sal

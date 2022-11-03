@@ -11,4 +11,7 @@
 		<include file="../DEMO_DB/Tables/employee_alter.sql" relativeToChangelogFile="true"/>
 		<include file="../DEMO_DB/Views/employee_count.vw" relativeToChangelogFile="true"/>
 		<include file="../DEMO_DB/Views/employee_avg.vw" relativeToChangelogFile="true"/>
+		<include file="../DEMO_DB/Packages/cust_sal.pks" relativeToChangelogFile="true"/>
+		<include file="../DEMO_DB/Packages/cust_sal.pkb" relativeToChangelogFile="true"/>
+		<include file="../DEMO_DB/Triggers/customer-trigger.trg" relativeToChangelogFile="true"/>
 </databaseChangeLog>

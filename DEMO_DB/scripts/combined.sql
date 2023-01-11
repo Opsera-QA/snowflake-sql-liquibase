@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset srinath:sql_plsql endDelimiter:/ runAlways:true
+--changeset srinath:sql_plsql endDelimiter:/ runAlways:true runOnChange:true
 select * from dual
 /
 declare

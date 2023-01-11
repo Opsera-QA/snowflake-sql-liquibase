@@ -14,4 +14,5 @@
 		<include file="../DEMO_DB/Packages/cust_sal.pks" relativeToChangelogFile="true"/>
 		<include file="../DEMO_DB/Packages/cust_sal.pkb" relativeToChangelogFile="true"/>
 		<include file="../DEMO_DB/Triggers/customer-trigger.trg" relativeToChangelogFile="true"/>
+		<include file="../DEMO_DB/scripts/combined.sql" relativeToChangelogFile="true"/>
 </databaseChangeLog>

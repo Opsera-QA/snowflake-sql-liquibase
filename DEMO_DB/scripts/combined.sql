@@ -1,9 +1,13 @@
 --liquibase formatted sql
---changeset srinath:create_branch_table endDelimiter:/
+--changeset srinath:sql_plsql endDelimiter:/ runAlways:true
 select * from dual
 /
-
-BEGIN
-   select * from dual;
-END;
+declare
+    l_today date := sysdate;
+begin
+    dbms_output.put_line(
+           'today is '||to_char(l_today,'Day'));
+exception when others then
+    dbms_output.put_line(sqlerrm);
+end;
 /

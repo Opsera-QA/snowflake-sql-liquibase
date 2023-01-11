@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset srinath:sequence endDelimiter:/ runAlways:true
+--changeset srinath:sequence endDelimiter:/ runAlways:true runOnChange:true
 CREATE SEQUENCE "DEMO_DB"."SEQ1" 
 START WITH 1
 MAXVALUE 9999999999999999999999999999 

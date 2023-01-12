@@ -5,7 +5,10 @@ AS
    SELECT *
      FROM DEMO_DB.branch
 /
-	
+
+SET DEFINE OFF
+/
+
 DECLARE
    l_count   NUMBER;
    l_query   VARCHAR2 (8000);

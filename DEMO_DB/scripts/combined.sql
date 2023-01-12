@@ -6,7 +6,7 @@ AS
      FROM DEMO_DB.branch
 /
 
-SET DEFINE OFF
+SET DEFINE OFF;
 /
 
 DECLARE

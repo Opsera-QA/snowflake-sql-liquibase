@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset srinath:create_proc
+--changeset srinath:create_proc runOnChange:true
 create or replace procedure demo_db.dqcoe_sample_proc (master1_id varchar) 
 as 
 master_1 nvarchar2(100);

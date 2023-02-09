@@ -1,5 +1,7 @@
 --liquibase formatted sql
 --changeset srinath:create_employee_view runOnChange:true
+DROP VIEW DEMO_DB.v_employee;
+
 CREATE OR REPLACE VIEW DEMO_DB.v_employee 
 AS
 SELECT emp_id,

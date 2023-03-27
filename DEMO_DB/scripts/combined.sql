@@ -8,7 +8,6 @@ AS
 
 SET DEFINE OFF;
 
-
 DECLARE
    l_count   NUMBER;
    l_query   VARCHAR2 (8000);
@@ -106,7 +105,6 @@ BEGIN
          put_line (
             'Error While creating Materialized view with error :' || SQLERRM);
    END;
-
 END;
 
 

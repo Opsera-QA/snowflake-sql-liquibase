@@ -1,6 +1,6 @@
 --liquibase formatted sql
 --changeset srinath:sql_plsql endDelimiter:/ runAlways:true runOnChange:true
-CREATE OR REPLACE VIEW DEMO_DB.INTG_AR_CUSTOMER_MV# 
+CREATE OR REPLACE VIEW DEMO_DB.INTG_AR_CUSTOMER_MV 
 AS 
    SELECT *
      FROM DEMO_DB.branch
@@ -105,6 +105,6 @@ BEGIN
          put_line (
             'Error While creating Materialized view with error :' || SQLERRM);
    END;
-
+END;
 
 

@@ -106,6 +106,5 @@ BEGIN
          put_line (
             'Error While creating Materialized view with error :' || SQLERRM);
    END;
-
 END;
 /

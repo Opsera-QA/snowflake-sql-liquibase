@@ -1,16 +1,16 @@
---liquibase formatted sql
---changeset srinath:sql_plsql endDelimiter:/ runAlways:true runOnChange:true
-CREATE OR REPLACE VIEW DEMO_DB.INTG_AR_CUSTOMER_MV 
+CREATE OR REPLACE VIEW DEMO_DB.INTG_AR_CUSTOMER_MV
 AS 
-   SELECT *
+
+
+ SELECT *
      FROM DEMO_DB.branch
 
 
 SET DEFINE OFF;
 
+
 DECLARE
    l_count   NUMBER;
-   l_query   VARCHAR2 (8000);
     
 BEGIN
    /*Checking for count of materialized views*/
@@ -28,7 +28,7 @@ BEGIN
          DBMS_OUTPUT.
          put_line ('Count of Materialized view dropped :' || l_count);
 
-         /*Dropping materialized view and it respective objects*/
+         /*Dropping materialized view and its respective objects*/
          EXECUTE IMMEDIATE 'DROP MATERIALIZED VIEW INTG_AR_CUSTOMER_MV';
       EXCEPTION
          WHEN OTHERS
@@ -37,7 +37,7 @@ BEGIN
             put_line (
                   'Exception while deleting MV :'
                || SQLERRM
-               || 'and can be ignoarble');
+               || ' and can be ignored');
       END;
    END IF;
 
@@ -55,7 +55,8 @@ BEGIN
       BEGIN
          DBMS_OUTPUT.put_line ('Count of Tables dropped :' || l_count);
 
-         /*Dropping Table and it respective objects*/
+         /*Dropping Table and its respective objects*/
+         EXECUTE IMMEDIATE 'DROP TABLE INTG_AR_CUSTOMER_MV';
       EXCEPTION
          WHEN OTHERS
          THEN
@@ -63,48 +64,23 @@ BEGIN
             put_line (
                   'Exception while deleting Table :'
                || SQLERRM
-               || 'and can be ignoarble');
+               || ' and can be ignored');
       END;
    END IF;
    
-   
-      /*Checking for count of synonym*/
+   /*Checking for count of synonym*/
    SELECT COUNT (1)
      INTO l_count
      FROM all_objects
     WHERE object_name = 'INTG_AR_CUSTOMER_MV'
           AND object_type = 'SYNONYM';
 
-   DBMS_OUTPUT.put_line ('table count :' || l_count);
+   DBMS_OUTPUT.put_line ('synonym count :' || l_count);
 
    IF l_count > 0
    THEN
       BEGIN
-         DBMS_OUTPUT.put_line ('Count of Synonym dropped :' || l_count);
+         DBMS_OUTPUT.put_line ('Count of Synonyms dropped :' || l_count);
 
-         /*Dropping Synonym and it respective objects*/
-      EXCEPTION
-         WHEN OTHERS
-         THEN
-            DBMS_OUTPUT.
-            put_line (
-                  'Exception while deleting Table :'
-               || SQLERRM
-               || 'and can be ignoarble');
-      END;
-   END IF;
-
-   /*Creating query to create materialized view*/
-
-   BEGIN
-       DBMS_OUTPUT.put_line ('Synonym and grants created');
-   EXCEPTION
-      WHEN OTHERS
-      THEN
-         DBMS_OUTPUT.
-         put_line (
-            'Error While creating Materialized view with error :' || SQLERRM);
-   END;
-END;
-
-
+         /*Dropping Synonym and its respective objects*/
+         EXECUTE IMMEDIATE 'DROP SYNONYM INTG_AR_CUSTOMER_MV';

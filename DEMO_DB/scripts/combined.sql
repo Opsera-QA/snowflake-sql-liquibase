@@ -4,10 +4,10 @@ CREATE OR REPLACE VIEW DEMO_DB.INTG_AR_CUSTOMER_MV#
 AS 
    SELECT *
      FROM DEMO_DB.branch
-/*
+
 
 SET DEFINE OFF;
-*/
+
 
 DECLARE
    l_count   NUMBER;
@@ -108,5 +108,5 @@ BEGIN
    END;
 
 END;
-/
+
 

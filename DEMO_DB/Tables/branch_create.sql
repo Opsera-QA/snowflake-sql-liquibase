@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset srinath:create_branch_table
+--changeset srinath:create_branch_table runOnChange:true
 CREATE TABLE DEMO_DB.branch (
 branch_id INT PRIMARY KEY,
 branch_name VARCHAR(30),

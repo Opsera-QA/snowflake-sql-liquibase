@@ -1,6 +1,6 @@
 --liquibase formatted sql
 --changeset srinath:create_employee_view runOnChange:true
-DROP VIEW DEMO_DB.v_employee CASCADE;
+--DROP VIEW DEMO_DB.v_employee CASCADE;
 
 CREATE OR REPLACE VIEW DEMO_DB.v_employee 
 AS

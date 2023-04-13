@@ -1,7 +1,7 @@
 --liquibase formatted sql
 --changeset srinath:create_employee_view runOnChange:true runwith:sqlplus
-SET SERVEROUTPUT ON;
 SET DEFINE OFF;
+SET SERVEROUTPUT ON;
 declare
     l_today date := sysdate;
 begin

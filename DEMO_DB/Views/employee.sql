@@ -1,7 +1,6 @@
 --liquibase formatted sql
 --changeset srinath:create_employee_view runOnChange:true runwith:sqlplus
 SET SERVEROUTPUT ON;
-
 SET DEFINE OFF;
 
 declare

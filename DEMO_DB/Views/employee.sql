@@ -1,5 +1,9 @@
 --liquibase formatted sql
---changeset srinath:create_employee_view runOnChange:true runwith:sqlplus
+--changeset srinath:create_employee_view runOnChange:true stripComments:false runwith:sqlplus
+/*******
+* comment 1
+*comment2
+******/
 SET DEFINE OFF;
 SET SERVEROUTPUT ON;
 declare

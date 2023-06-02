@@ -8,9 +8,5 @@
 		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd
 		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
 		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.9.xsd">
-		<include file="../DEMO_DB/Tables/employee_create.sql" relativeToChangelogFile="true"/>
-		<include file="../DEMO_DB/Tables/branch_create.sql" relativeToChangelogFile="true"/>
-		<include file="../DEMO_DB/Views/employee.sql" relativeToChangelogFile="true"/>
-		<include file="../DEMO_DB/Views/branch.sql" relativeToChangelogFile="true"/>
-		<include file="../DEMO_DB/Procedures/employee_procedure.sql" relativeToChangelogFile="true"/>
+		 <include file="../DEMO_DB/Views/employee.sql" relativeToChangelogFile="true"/>
 </databaseChangeLog>
